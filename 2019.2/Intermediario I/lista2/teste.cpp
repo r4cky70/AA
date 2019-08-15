@@ -11,11 +11,37 @@ using namespace std;
 typedef long long ll;
 typedef vector < int > vi;
 typedef pair < int, int > pii;
+typedef vector < pii > vpii;
 
-// std::mt19937 rng((int) std::chrono::steady_clock::now().time_since_epoch().count());
+int mylower(vi a, int l, int r, int v){
+  int mid = (l+r)/2;
+  if(l == r) return l;
+  else if(a[mid] >= v){
+    return mylower(a, l, mid, v);
+  }else{
+    return mylower(a, mid+1, r, v);
+  }
+}
+int myupper(vi a, int l,int r, int v){
+  int mid = (l+r)/2;
+  if(l == r) return l;
+  else if(a[mid] <= v){
+    return myupper(a, mid+1, r, v);
+  }else{
+    return myupper(a, l, mid, v);
+  }
+}
+
+
 
 int main(){
-  for(int i =  0; i < 1000000000; ++i){
-    int x = 0;
+  vi a;
+  for(int i = 0; i < 8; ++i){
+    a.pb(i*2);
   }
+  for(int i = 0; i < 8; ++i){
+    cout << a[i] << " ";
+  }cout << endl;
+  cout << mylower(a, 0, a.size()-1, 2) << endl;
+  cout << myupper(a, 0, a.size()-1, 2) << endl;
 }
