@@ -2,7 +2,7 @@
 #define MAXS 100007
 #define INF 2147483647
 
-#define make_pair(a, b) mp(a,b)
+#define mp(a, b) make_pair(a,b)
 #define pb(a) push_back(a)
 #define INP freopen("input.txt", "r", stdin)
 #define OUT freopen("out.txt", "w", stdout)
