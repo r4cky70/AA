@@ -1,3 +1,3 @@
 #AA
 
-Here i keep the solutions of the lists of exercises that i solved during my graduation
+Here I keep the exercise list solutions that I solved during my graduation
