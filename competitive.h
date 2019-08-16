@@ -13,12 +13,5 @@ using namespace std;
 typedef long long ll;
 typedef vector < int > vi;
 typedef pair < int, int > pii;
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-
-int main(){
-  mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
-  uniform_int_distribution<int> t(0, 99);
-  cout << t(rng) << endl;
-  cout << fixed << setprecision(12);
-  cout << acos(-1) << endl;
-}
