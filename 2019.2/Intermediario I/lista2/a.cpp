@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #define MAXS 100007
-#define INF 2234567890
+#define INF 2134567890
 
 #define make_pair(a, b) mp(a,b)
 #define pb push_back
