@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define MAXS 100007
+#define MAXS 500007
 #define INF 2147483647
 
 #define mp(a, b) make_pair(a,b)
@@ -15,17 +15,9 @@ typedef vector < int > vi;
 typedef pair < int, int > pii;
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-int a, b;
-int arr[8];
-
-void update(int idx, int v){
-  for(;idx<8;idx+=idx&-idx){
-
-  }
-}
-
-
+int n;
+int arr[MAXS];
 
 int main(){
-  cout << (7&-7) << "  " << 7+(7&-7) << endl;
+  
 }
