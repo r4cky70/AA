@@ -19,62 +19,47 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 int n, q;
 int arr[MAXS];
 int sq;
-int last[MAXS], jump[MAXS];
+int limite[MAXS];
+int jump[MAXS], last[MAXS];
+
+void lim(){
+  for(int i= 0; i < sq; ++i){
+    limite[i] = sq*i-1;
+  }
+}
+
 
 void build(int id){
-  int buck = id/sq;
-  if(id+arr[id] >= n || (id+arr[id])/sq > buck){
-    last[id] = id;
-    jump[id] = 1;
+  if(id+arr[id] >= n || id+arr[id] > lim[id/sq]){
+    last[id] = id; jump[id]++;
   }else{
-    last[id] = last[id+arr[id]];
-    jump[id] = jump[id+arr[id]]+1;
+    jump[id]++;
+    last[id] = 
   }
+  while(id < lim)
 }
 
-void update(int id, int v){
-  arr[id] = v;
-  for(int i = id; i >= (id/sq)*sq; --i){
-    build(i);
-  }
-}
 
-pii query(int id){
-  int ans = 0;
-  int l = 0;
-  while(id < n){
-    l = last[id];
-    if(last[id] != id){
-      ans += jump[id];
-      id = last[id]+arr[last[id]];
-    }else{
-      ans += jump[id];
-      id += arr[id];
-    }
-  }
-  return mp(l, ans);
-}
+
+
 
 
 int main(){
-  FASTIO;
-  cin >> n >> q;
   sq = sqrt(MAXS);
-
-  for(int k = 0; k < n; ++k){
-    cin >> arr[k];
+  cin >> n >> q;
+  for(int i=  0; i < n; ++i){
+    cin >> arr[i];
   }
-  for(int i = n-1; i >= 0; --i) build(i);
   int a, b, c;
+  for(int  i = n-1; i > -1; --i){
+    build(i);
+  }
   while(q--){
     cin >> a;
     if(a == 1){
       cin >> b;
-      pii ans = query(b-1);
-      cout << ans.first+1 << " " << ans.second << "\n";
     }else{
       cin >> b >> c;
-      update(b-1, c);
     }
   }
 }
