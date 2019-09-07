@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #define MAXS 100007
-#define INF 2147483647
+#define INF (int)__builtin_inf()
 
 #define mp(a, b) make_pair(a,b)
 #define pb(a) push_back(a)
