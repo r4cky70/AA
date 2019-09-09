@@ -1,4 +1,10 @@
+@echo off
 
+echo Compilling %1.cpp...
+IF [%2] == [] (
+  g++ %1.cpp -std=c++14 -o sla
+) ELSE (   
+  g++ %1.cpp -std=c++14 -DLOCAL -o sla )
+echo Compilled.
 
-g++ %1.cpp -std=c++14 -DLOCAL -o sla
 sla
