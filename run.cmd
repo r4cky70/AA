@@ -7,4 +7,8 @@ IF [%2] == [] (
   g++ %1.cpp -std=c++14 -DLOCAL -o sla )
 echo Compilled.
 
-sla
+IF [%2] == [1] ( 
+  sla >out.txt
+) ELSE (
+  sla
+)
