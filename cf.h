@@ -30,7 +30,7 @@ int main(){
 #ifdef LOCAL
   freopen("input.txt", "r", stdin);
   solve();
-  cerr << ".\nTime: " << 1.0*clock()/CLOCKS_PER_SEC << " s.\n";
+  cerr << "Time: " << 1.0*clock()/CLOCKS_PER_SEC << " s.\n";
 #else
   ios::sync_with_stdio(false);cin.tie(0);
   solve();
