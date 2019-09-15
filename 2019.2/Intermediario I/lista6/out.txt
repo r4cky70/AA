@@ -1,0 +1,2 @@
+1
+[Inferior 1 (process 10116) exited normally]
