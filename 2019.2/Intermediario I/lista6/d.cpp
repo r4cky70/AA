@@ -70,7 +70,6 @@ int exgcd(int a, int b, int &x, int &y){
   return d;
 }
 
-
 void solve(){
   ll n, e, c;
   sieve();
