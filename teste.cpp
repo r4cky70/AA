@@ -14,7 +14,7 @@ const int MN = 100007;
 
 void solvetask(){
 
-  
+  cout << "rodou o cpp\n";
     
 }
 
